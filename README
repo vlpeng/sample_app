@@ -1,0 +1,39 @@
+== Welcome to sample_app
+
+The default directory structure of a generated Ruby on Rails application:
+
+  |-- app
+  |   |-- controllers
+  |   |-- helpers
+  |   |-- models
+  |   `-- views
+  |       `-- layouts
+  |-- config
+  |   |-- environments
+  |   |-- initializers
+  |   `-- locales
+  |-- db
+  |-- doc
+  |-- lib
+  |   `-- tasks
+  |-- log
+  |-- public
+  |   |-- images
+  |   |-- javascripts
+  |   `-- stylesheets
+  |-- script
+  |   `-- performance
+  |-- test
+  |   |-- fixtures
+  |   |-- functional
+  |   |-- integration
+  |   |-- performance
+  |   `-- unit
+  |-- tmp
+  |   |-- cache
+  |   |-- pids
+  |   |-- sessions
+  |   `-- sockets
+  `-- vendor
+      `-- plugins
+
