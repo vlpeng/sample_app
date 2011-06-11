@@ -6,10 +6,14 @@ gem 'rails', '3.0.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', '1.3.3', :require => 'sqlite3'
+gem 'spork', '~> 0.8'
+gem 'autotest' , '4.3.2'
+
 
 
 group :development do
   gem 'rspec-rails', '2.6.0'
+  gem 'annotate-models', '1.0.4'
 end
 
 group :test do
@@ -17,8 +21,6 @@ group :test do
   gem 'webrat', '0.7.1'
 end
 
-gem 'spork', '~> 0.8'
-gem 'autotest' , '4.3.2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
