@@ -8,7 +8,7 @@ gem 'rails', '3.0.1'
 gem 'sqlite3-ruby', '1.3.3', :require => 'sqlite3'
 gem 'spork', '~> 0.8'
 gem 'autotest' , '4.3.2'
-
+gem 'gravatar_image_tag', '1.0.0.pre2'
 
 
 group :development do
