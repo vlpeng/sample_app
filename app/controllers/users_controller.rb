@@ -10,6 +10,12 @@ class UsersController < ApplicationController
   end
 
 
+  def edit
+      @user = User.find(params[:id])
+      @title = "Edit user"
+  end
+
+
   
   def new
     @user = User.new
@@ -28,11 +34,6 @@ class UsersController < ApplicationController
     render 'new'
   end
 end
-
-  def edit
-    @user = User.find(params[:id])
-    @title = "Edit user"
-  end
 
   def update
     @user = User.find(params[:id])
