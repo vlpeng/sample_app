@@ -304,7 +304,6 @@ end
     end
   end
 
-
   describe "DELETE 'destroy'" do
 
     before(:each) do
@@ -322,15 +321,15 @@ end
       it "should protect the page" do
         test_sign_in(@user)
         delete :destroy, :id => @user
-        response.should redirect_to(users_path)
+        response.should redirect_to(root_path)
       end
     end
 
     describe "as an admin user" do
 
       before(:each) do
-        @admin = Factory(:user, :email => "admin@example.com", :admin => true)
-        test_sign_in(@admin)
+        admin = Factory(:user, :email => "admin@example.com", :admin => true)
+        test_sign_in(admin)
       end
 
       it "should destroy the user" do
@@ -339,12 +338,11 @@ end
         end.should change(User, :count).by(-1)
       end
 
-      it "should redirect to the users page" do
-        delete :destroy, :id => @user
-        flash[:success].should =~ /destroyed/i
-        response.should redirect_to(users_path)
-      end
-
-    end
+      it "should not be able to destroy itself" do
+        lambda do
+         delete :destroy, :id => @admin
+        end.should_not change(User, :count)
+     end
   end
+end
 end
